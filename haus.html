@@ -79,6 +79,46 @@ Oder ruf an: (0551) 54 19 28
      <div class="w3-container" id="services" style="margin-top:75px;margin-bottom:20px">
     <img src="grundriss.jpg" style="width:100%" onclick="onClick(this)" alt="Grundriss">
   </div>
+    
+  <!-- Photo grid (modal) -->
+
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="zimmer1.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 1">
+      <img src="zimmer3.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 3">
+      <img src="zimmer5.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 5">
+    </div>
+
+    <div class="w3-half">
+      <img src="zimmer2.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 2">
+      <img src="zimmer4.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 4">
+      <img src="zimmer6.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer6">
+    </div>
+  </div>
+    
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="zimmer7.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 7">
+      <img src="zimmer9.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 9">
+      <img src="keller1.jpg" style="width:100%" onclick="onClick(this)" alt="Fitnesskeller">
+    </div>
+
+    <div class="w3-half">
+      <img src="zimmer8.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 8">
+      <img src="zimmer10.jpg" style="width:100%" onclick="onClick(this)" alt="Zimmer 10">
+      <img src="keller2.jpg" style="width:100%" onclick="onClick(this)" alt="Fitnesskeller">
+    </div>
+  </div>
+    
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+    
 
 <!-- End page content -->
 </div>
