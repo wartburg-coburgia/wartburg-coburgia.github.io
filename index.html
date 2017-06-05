@@ -1,152 +1,85 @@
+<!DOCTYPE html>
+<html>
+<title>Wartburg Coburgia - Startseite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Verbindung,Wartburg,Coburgia,Göttingen" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-padding-xlarge w3-hide-large w3-display-topleft w3-hover-white" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Wartburg<br>Coburgia</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Startseite</a> 
+    <a href="semesterprogramm.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Semesterprogramm</a> 
+    <a href="satzung.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Satzung</a> 
+    <a href="aktivitas.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Aktivitas</a> 
+    <a href="altherrenschaft.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Altherrenschaft</a> 
+    <a href="geschichte.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Geschichte</a>
+    <a href="haus.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Haus</a>
+    <a href="impressum.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Impressum</a>
+    <a href="https://www.facebook.com/AkademischEvangelischeVerbindungWartburgCoburgia/?fref=ts" target="_blank">Besucht uns auf Facebook</a>
+  </div>
+</nav>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de" lang="de-de">
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Wartburg Coburgia</span>
+</header>
 
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="Verbindung,Wartburg,Coburgia,Göttingen" />
-  <meta name="title" content="Startseite" />
-  <meta name="author" content="Administrator" />
-  <meta name="description" content="Akademisch-Evangelischen Verbindung Wartburg-Coburgia im Wartburg-Kartell zu Göttingen" />
-  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
-  <title>Startseite</title>
-  <link href="templates/ja_purity/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-  <script type="text/javascript" src="media/system/js/mootools.js"></script>
-  <script type="text/javascript" src="media/system/js/caption.js"></script>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-<link rel="stylesheet" href="templates/system/css/system.css" type="text/css" />
-<link rel="stylesheet" href="templates/system/css/general.css" type="text/css" />
-<link rel="stylesheet" href="templates/ja_purity/css/template.css" type="text/css" />
+   <!-- Header -->
+    <div class="w3-container" id="services" style="margin-top:70px">
+        <img src="haus.jpg" style="width:30%" onclick="onClick(this)" alt="Haus">
+    </div>
+  <div class="w3-container" id="designers" style="margin-top:10px">
+    <p>Willkommen bei der</br>
+    Akademisch-Evangelischen Verbindung</br>
+    Wartburg Coburgia zu Göttingen</br>
+    im Wartburgkartell
+    </p>
+  </div>
+  </div>
+<!-- End page content -->
+</div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
 
-<script language="javascript" type="text/javascript" src="templates/ja_purity/js/ja.script.js"></script>
-
-<script language="javascript" type="text/javascript">
-var rightCollapseDefault='show';
-var excludeModules='38';
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 </script>
-<script language="javascript" type="text/javascript" src="templates/ja_purity/js/ja.rightcol.js"></script>
-
-<link rel="stylesheet" href="templates/ja_purity/css/menu.css" type="text/css" />
-
-
-<link rel="stylesheet" href="templates/ja_purity/styles/background/lighter/style.css" type="text/css" />
-<link rel="stylesheet" href="templates/ja_purity/styles/elements/black/style.css" type="text/css" />
-
-<!--[if IE 7.0]>
-<style type="text/css">
-.clearfix {display: inline-block;}
-</style>
-<![endif]-->
-
-<style type="text/css">
-#ja-header,#ja-mainnav,#ja-container,#ja-botsl,#ja-footer {width: 97%;margin: 0 auto;}
-#ja-wrapper {min-width: 100%;}
-</style>
-</head>
-
-<body id="bd" class="fs3 Others" >
-<a name="Top" id="Top"></a>
-<ul class="accessibility">
-	<li><a href="index.html#ja-content" title="Zum Inhalt wechseln">Zum Inhalt wechseln</a></li>
-	<li><a href="index.html#ja-mainnav" title="Zur Hauptnavigation">Zur Hauptnavigation</a></li>
-	<li><a href="index.html#ja-col1" title="Zur ersten Spalte">Zur ersten Spalte</a></li>
-	<li><a href="index.html#ja-col2" title="Zur zweiten Spalte">Zur zweiten Spalte</a></li>
-</ul>
-
-<div id="ja-wrapper">
-
-<!-- BEGIN: HEADER -->
-<div id="ja-headerwrap">
-		<div id="ja-header" class="clearfix" style="background: url(templates/ja_purity/images/header/header2.jpg) no-repeat top right;">
-	
-	<div class="ja-headermask">&nbsp;</div>
-
-			<h1 class="logo">
-			<a href="index.php.html" title="AEV Wartburg-Coburgia"><span>AEV Wartburg-Coburgia</span></a>
-		</h1>
-	
-			<ul class="ja-usertools-font">
-	      <li><img style="cursor: pointer;" title="Schrift vergrößern" src="templates/ja_purity/images/user-increase.png" alt="Schrift vergrößern" id="ja-tool-increase" onclick="switchFontSize('ja_purity_ja_font','inc'); return false;" /></li>
-		  <li><img style="cursor: pointer;" title="Standard-Schriftgröße" src="templates/ja_purity/images/user-reset.png" alt="Standard-Schriftgröße" id="ja-tool-reset" onclick="switchFontSize('ja_purity_ja_font',3); return false;" /></li>
-		  <li><img style="cursor: pointer;" title="Schriftgröße verkleinern" src="templates/ja_purity/images/user-decrease.png" alt="Schriftgröße verkleinern" id="ja-tool-decrease" onclick="switchFontSize('ja_purity_ja_font','dec'); return false;" /></li>
-		</ul>
-		<script type="text/javascript">var CurrentFontSize=parseInt('3');</script>
-		
-	
-	</div>
-</div>
-<!-- END: HEADER -->
-
-<!-- BEGIN: MAIN NAVIGATION -->
-<!-- END: MAIN NAVIGATION -->
-
-<div id="ja-containerwrap-fr">
-<div id="ja-containerwrap2">
-	<div id="ja-container">
-	<div id="ja-container2" class="clearfix">
-
-		<div id="ja-mainbody-fr" class="clearfix">
-
-		<!-- BEGIN: CONTENT -->
-		<div id="ja-contentwrap">
-		<div id="ja-content">
-
-			
-
-						<div id="ja-pathway">
-				
-			</div>
-			
-			
-
-
-
-
-<div class="article-content">
-<p style="text-align: center;"><img src="images/stories/wappen.jpg" alt="wappen" height="339" width="225" /></p>
-<p style="text-align: center;"> </p>
-<p style="text-align: center;"><strong>Willkommen bei der</strong></p>
-<p style="text-align: center;"><strong>Akademisch-Evangelischen Verbindung WARTBURG-COBURGIA zu Göttingen </strong></p>
-<p style="text-align: center;"><strong>im Wartburg-Kartell !</strong></p>
-<br />
-<p style="text-align: center;"><strong><br /></strong></p></div>
-
-
-<span class="article_separator">&nbsp;</span>
-
-
-			
-		</div>
-		</div>
-		<!-- END: CONTENT -->
-
-				<!-- BEGIN: LEFT COLUMN -->
-		<div id="ja-col1">
-					<div class="moduletable_menu">
-					<ul class="menu"><li class="parent item8"><span class="separator"><span>Aktuelles</span></span><ul><li class="item27"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=11&amp;Itemid=27.html"><span>Semesterprogramm</span></a></li><li class="item6"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=1&amp;Itemid=6.html"><span>Bundeslied</span></a></li></ul></li><li class="parent item11"><span class="separator"><span>Über uns</span></span><ul><li class="item7"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=2&amp;Itemid=7.html"><span>Unsere Satzung</span></a></li><li class="item23"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=9&amp;Itemid=23.html"><span>Was ist die Aktivitas?</span></a></li><li class="item24"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=10&amp;Itemid=24.html"><span>Sicht der Altherrenschaft</span></a></li><li class="item12"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=5&amp;Itemid=12.html"><span>Unsere Geschichte</span></a></li></ul></li><li class="parent item14"><span class="separator"><span>Haus</span></span><ul><li class="item10"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=4&amp;Itemid=10.html"><span>Zimmer</span></a></li></ul></li></ul>		</div>
-			<div class="moduletable">
-					<ul class="menu_directlink"><li class="item17"><a href="index.php%3Foption=com_content&amp;view=article&amp;id=7&amp;Itemid=17.html"><span>Impressum</span></a></li><li class="item19"><a href="phpBB3.html"><span>Forum</span></a></li></ul>		</div>
-	
-		</div><br />
-		<!-- END: LEFT COLUMN -->
-		
-		</div>
-
-		
-	</div>
-	</div>
-</div>
-</div>
-
-
-<!-- BEGIN: FOOTER -->
-
-
-
 
 </body>
-
 </html>
+
